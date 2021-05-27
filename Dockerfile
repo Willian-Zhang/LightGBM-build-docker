@@ -20,6 +20,8 @@ RUN conda install python=3.7
 
 RUN conda install -q -y numpy scipy scikit-learn pandas
 
+RUN pip install -U pytest
+
 RUN git clone --recursive --branch stable --depth 1 https://github.com/Microsoft/LightGBM
 
 RUN apt-get autoremove -y && apt-get clean && \
